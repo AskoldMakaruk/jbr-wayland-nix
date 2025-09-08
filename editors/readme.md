@@ -20,6 +20,7 @@ To test the build process of every IDE (as well as the process for adding plugin
  - Source builds need a bit more effort, as they **aren't automated at the moment**:
    - Find the build of the stable release you want to target (usually different for pycharm and idea, should have three components)
    - Go to download page (eg. https://www.jetbrains.com/rider/download/?section=linux) and get version, build and checksum
+   - write new values to ../editors/bin/versions.json
    - Run `nix build .#jetbrains.<ide>.src`, then `./source/build_maven.py source/idea_maven_artefacts.json result/`
    - Update `source/brokenPlugins.json` (from https://plugins.jetbrains.com/files/brokenPlugins.json)
    - Do a test build
